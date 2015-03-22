@@ -1,3 +1,7 @@
+
+## These two functions are used to create a special object that stores a matrix and caches its inverse.
+
+## makeCacheMatrix creates a list of functions to
 ## set the value of a matrix
 ## get the value of the matrix
 ## set the value of the matrix's inverse	
@@ -17,9 +21,10 @@ makeCacheMatrix <- function(x = matrix()) {
 		getsolve = getsolve)
 }
 
-#Calculates the inverse of the matrix created with the above function, first checking to see if the 
-#inverse has already been calculated. If so, it gets the inverse from the cache and skips the computation. 
-#Otherwise, it calculates the inverse of the matrix and sets the value of the inverse in the cache via the setsolve function.
+## cacheSolve calculates the inverse of the matrix created with the above function, first checking to see if the 
+## inverse has already been calculated. If so, it gets the inverse from the cache and skips the computation. 
+## Otherwise, it calculates the inverse of the matrix and sets the value of the inverse in the cache via the 
+## setsolve function.
 
 cacheSolve <- function(x, ...) {
         m <- x$getmean()
